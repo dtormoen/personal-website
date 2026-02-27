@@ -14,3 +14,6 @@ build:
 # Check for broken links and other issues
 check:
     zola check
+
+# Run build and check to ensure we can commit the changes
+precommit: check build
