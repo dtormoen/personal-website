@@ -1,11 +1,19 @@
-# The URL the site will be built for
 base_url = "https://dannytormoen.com"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+title = "Danny's Blog"
+description = "A personal blog."
+author = "Danny Tormoen"
+default_language = "en"
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+theme = "kita"
+
+compile_sass = true
+build_search_index = false
+
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+taxonomies = [{ name = "tags", feed = true, paginate_by = 5 }]
 
 [markdown]
 
@@ -13,4 +21,38 @@ build_search_index = true
 theme = "catppuccin-mocha"
 
 [extra]
-# Put all your custom variables here
+math = true
+mermaid = true
+comment = false
+side_toc = true
+
+[extra.style]
+
+[extra.profile]
+name = "Danny Tormoen"
+bio = "Welcome to my blog."
+avatar_url = "icons/github.svg"
+avatar_invert = true
+
+[[extra.profile.social]]
+name = "github"
+url = "https://github.com"
+
+[[extra.profile.social]]
+name = "rss"
+url = "$BASE_URL/atom.xml"
+
+[[extra.menu]]
+name = "Archive"
+url = "$BASE_URL/archive"
+
+[[extra.menu]]
+name = "Tags"
+url = "$BASE_URL/tags"
+
+[[extra.menu]]
+name = "About"
+url = "$BASE_URL/about"
+
+[extra.footer]
+since = 2025
